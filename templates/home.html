@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>Marco Wang Personal Website</title>
+<head>
+<body style="background-color:black;">
+  <div class="container-fluid"style="background:#1B1B1B;" >
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <div class="col-md-"><img src="place.png" width="40" height="40" style="margin:0px 5px">></div>
+      <div class="col-8"><h4 style="color:white"><b>Marco Wang</b></h4></div>
+      <div class="col"><h6 style="color:white"><b><a href="#about">About Me</a></b></h6></div>
+      <div class="col"><h6 style="color:white"><b>Project #1</b></h6></div>
+      <div class="col"><h6 style="color:white"><b>Project #2</b></h6></div>
+</nav>
+
+</div>6
+
+
+
+<div style ="margin: 100px; border: 5px white; text-align:center; color:white;">
+    <h1>Spotify Data Analysis</h1>
+    <img src="data:image/jpeg;base64,{{ img_data }}" alt="img_data"  id="imgslot"/>
+    <img src="data:image/jpeg;base64,{{ img_data2 }}" alt="img_data"  id="imgslot"/>
+
+    <hr style="width:25%;height:2px;color:white;margin:30px 620px;">
+    <h2>Trends</h2>
+    <div class="container">
+        <div class="row" >
+          <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+                <h3>Genres</h3>
+                {{ trend_genre }}
+          </div>
+          <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+            <h3>Artists</h3>
+            {{ trend_artist }}
+          </div>
+        </div>
+        <div class="row" >
+            <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+                <h3>Popularity</h3>
+                {{ avg_popularity }}
+          </div>
+          <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+            <h3>Favorite Artists</h3>
+            {{ most_artist }}
+        </div>
+        </div>
+        <div class="row" >
+          <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+              <h3>Energy</h3>
+              {{ energy_str }}
+        </div>
+        <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+          <h3>Danceability</h3>
+          {{ dance_str }}
+      </div>
+      </div>
+      <div class="row" >
+        <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+            <h3>Tempo</h3>
+            {{ tempo_str }}
+      </div>
+      <div class="col" style="margin: 25px; padding: 10px;border:5 px white;color:white;background: rgb(110, 110, 110);">
+        <h3>Loudness</h3>
+        {{ loudness_str }}
+    </div>
+    </div>
+    </div>
+    <hr style="width:25%;height:2px;color:white;margin:30px 620px;">
+    <h2>Songs</h2>
+  <div style="margin: 25px;">
+    <style>
+ 
+      td {
+             width: 150px;
+             margin: 0px 250px 250px;
+             text-align: center;
+             border: 1px solid white;
+             padding: 10px;
+           }
+     </style>
+<h4>Recently Played Songs<h4>
+{% for table in tables %}
+{{titles[loop.index]}}
+{{ table|safe }}
+{% endfor %}
+<h4>Most Played Songs</h4>
+{% for table in tables1 %}
+{{titles1[loop.index]}}
+{{ table|safe }}
+{% endfor %}
+</div>
+</div>
+</body>
+</html>
