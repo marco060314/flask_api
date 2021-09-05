@@ -5,16 +5,16 @@ import json
 import pandas as pd
 import spotipy.util as util
 import matplotlib.pyplot as plt
-import mpld3
+#import mpld3
 import numpy as np
-from mpld3 import plugins
+#from mpld3 import plugins
 from spotipy.oauth2 import SpotifyClientCredentials
 from sklearn.preprocessing import MinMaxScaler
 import math
 from io import BytesIO
 import plotly.express as px
 import scipy as sp
-import chart_studio.plotly as py
+#import chart_studio.plotly as py
 import plotly.figure_factory as ff
 from flask import Flask, render_template
 app = Flask(__name__)
